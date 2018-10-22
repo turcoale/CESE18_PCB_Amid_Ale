@@ -1,0 +1,283 @@
+EESchema Schematic File Version 4
+LIBS:Poncho_Alarma-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6300 3950 6300 4300
+$Comp
+L PonchoPLC:RELAY_C K?
+U 1 1 5BD28B64
+P 6450 3750
+F 0 "K?" V 6503 3559 60  0000 R CNN
+F 1 "RELAY_C" V 6397 3559 60  0000 R CNN
+F 2 "" H 6450 3750 60  0000 C CNN
+F 3 "" H 6450 3750 60  0000 C CNN
+	1    6450 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 5BD28B6B
+P 5600 4500
+F 0 "Q?" H 5805 4546 50  0000 L CNN
+F 1 "2N7002" H 5805 4455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5800 4425 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 5600 4500 50  0001 L CNN
+	1    5600 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4650 5050 4500
+Wire Wire Line
+	5050 4500 5400 4500
+$Comp
+L power:GND #PWR?
+U 1 1 5BD28B74
+P 5050 5000
+F 0 "#PWR?" H 5050 4750 50  0001 C CNN
+F 1 "GND" H 5055 4827 50  0000 C CNN
+F 2 "" H 5050 5000 50  0001 C CNN
+F 3 "" H 5050 5000 50  0001 C CNN
+	1    5050 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BD28B7A
+P 5700 4850
+F 0 "#PWR?" H 5700 4600 50  0001 C CNN
+F 1 "GND" H 5705 4677 50  0000 C CNN
+F 2 "" H 5700 4850 50  0001 C CNN
+F 3 "" H 5700 4850 50  0001 C CNN
+	1    5700 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 4850 5700 4700
+$Comp
+L Diode:LL4148 D?
+U 1 1 5BD28B81
+P 5700 3850
+F 0 "D?" V 5654 3929 50  0000 L CNN
+F 1 "LL4148" V 5745 3929 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 5700 3675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/85557/ll4148.pdf" H 5700 3850 50  0001 C CNN
+	1    5700 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_Small_ALT D?
+U 1 1 5BD28B88
+P 5300 3700
+F 0 "D?" V 5346 3632 50  0000 R CNN
+F 1 "LED_Rojo" V 5200 3700 50  0000 R CNN
+F 2 "" V 5300 3700 50  0001 C CNN
+F 3 "~" V 5300 3700 50  0001 C CNN
+	1    5300 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5BD28B8F
+P 5050 4750
+F 0 "R?" H 5109 4796 50  0000 L CNN
+F 1 "100k" H 5109 4705 50  0000 L CNN
+F 2 "" H 5050 4750 50  0001 C CNN
+F 3 "~" H 5050 4750 50  0001 C CNN
+	1    5050 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4850 5050 5000
+$Comp
+L Device:R_Small R?
+U 1 1 5BD28B97
+P 5300 4050
+F 0 "R?" H 5359 4096 50  0000 L CNN
+F 1 "330" H 5359 4005 50  0000 L CNN
+F 2 "" H 5300 4050 50  0001 C CNN
+F 3 "~" H 5300 4050 50  0001 C CNN
+	1    5300 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 4000 5700 4300
+Connection ~ 5700 4300
+Wire Wire Line
+	5300 4300 5700 4300
+Wire Wire Line
+	5700 4300 6300 4300
+Wire Wire Line
+	5700 3700 5700 3550
+Wire Wire Line
+	5700 3550 6300 3550
+$Comp
+L power:+5V #PWR?
+U 1 1 5BD28BA4
+P 5700 3450
+F 0 "#PWR?" H 5700 3300 50  0001 C CNN
+F 1 "+5V" H 5715 3623 50  0000 C CNN
+F 2 "" H 5700 3450 50  0001 C CNN
+F 3 "" H 5700 3450 50  0001 C CNN
+	1    5700 3450
+	1    0    0    -1  
+$EndComp
+Connection ~ 5700 3550
+Wire Wire Line
+	5700 3450 5700 3550
+Wire Wire Line
+	5300 4150 5300 4300
+Wire Wire Line
+	5300 3550 5700 3550
+Wire Wire Line
+	5300 3600 5300 3550
+Wire Wire Line
+	5300 3800 5300 3950
+Wire Wire Line
+	6300 1850 6300 2200
+$Comp
+L PonchoPLC:RELAY_C K?
+U 1 1 5BD28BB1
+P 6450 1650
+F 0 "K?" V 6503 1459 60  0000 R CNN
+F 1 "RELAY_C" V 6397 1459 60  0000 R CNN
+F 2 "" H 6450 1650 60  0000 C CNN
+F 3 "" H 6450 1650 60  0000 C CNN
+	1    6450 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 5BD28BB8
+P 5600 2400
+F 0 "Q?" H 5805 2446 50  0000 L CNN
+F 1 "2N7002" H 5805 2355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5800 2325 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 5600 2400 50  0001 L CNN
+	1    5600 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2550 5050 2400
+Wire Wire Line
+	5050 2400 5400 2400
+$Comp
+L power:GND #PWR?
+U 1 1 5BD28BC1
+P 5050 2900
+F 0 "#PWR?" H 5050 2650 50  0001 C CNN
+F 1 "GND" H 5055 2727 50  0000 C CNN
+F 2 "" H 5050 2900 50  0001 C CNN
+F 3 "" H 5050 2900 50  0001 C CNN
+	1    5050 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BD28BC7
+P 5700 2750
+F 0 "#PWR?" H 5700 2500 50  0001 C CNN
+F 1 "GND" H 5705 2577 50  0000 C CNN
+F 2 "" H 5700 2750 50  0001 C CNN
+F 3 "" H 5700 2750 50  0001 C CNN
+	1    5700 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2750 5700 2600
+$Comp
+L Diode:LL4148 D?
+U 1 1 5BD28BCE
+P 5700 1750
+F 0 "D?" V 5654 1829 50  0000 L CNN
+F 1 "LL4148" V 5745 1829 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 5700 1575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/85557/ll4148.pdf" H 5700 1750 50  0001 C CNN
+	1    5700 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_Small_ALT D?
+U 1 1 5BD28BD5
+P 5300 1600
+F 0 "D?" V 5346 1532 50  0000 R CNN
+F 1 "LED_Rojo" V 5200 1600 50  0000 R CNN
+F 2 "" V 5300 1600 50  0001 C CNN
+F 3 "~" V 5300 1600 50  0001 C CNN
+	1    5300 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5BD28BDC
+P 5050 2650
+F 0 "R?" H 5109 2696 50  0000 L CNN
+F 1 "100k" H 5109 2605 50  0000 L CNN
+F 2 "" H 5050 2650 50  0001 C CNN
+F 3 "~" H 5050 2650 50  0001 C CNN
+	1    5050 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2750 5050 2900
+$Comp
+L Device:R_Small R?
+U 1 1 5BD28BE4
+P 5300 1950
+F 0 "R?" H 5359 1996 50  0000 L CNN
+F 1 "330" H 5359 1905 50  0000 L CNN
+F 2 "" H 5300 1950 50  0001 C CNN
+F 3 "~" H 5300 1950 50  0001 C CNN
+	1    5300 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 1900 5700 2200
+Connection ~ 5700 2200
+Wire Wire Line
+	5300 2200 5700 2200
+Wire Wire Line
+	5700 2200 6300 2200
+Wire Wire Line
+	5700 1600 5700 1450
+Wire Wire Line
+	5700 1450 6300 1450
+$Comp
+L power:+5V #PWR?
+U 1 1 5BD28BF1
+P 5700 1350
+F 0 "#PWR?" H 5700 1200 50  0001 C CNN
+F 1 "+5V" H 5715 1523 50  0000 C CNN
+F 2 "" H 5700 1350 50  0001 C CNN
+F 3 "" H 5700 1350 50  0001 C CNN
+	1    5700 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 5700 1450
+Wire Wire Line
+	5700 1350 5700 1450
+Wire Wire Line
+	5300 2050 5300 2200
+Wire Wire Line
+	5300 1450 5700 1450
+Wire Wire Line
+	5300 1500 5300 1450
+Wire Wire Line
+	5300 1700 5300 1850
+Text HLabel 5050 2400 0    50   Input ~ 0
+Out_1
+Text HLabel 5300 3550 0    50   Input ~ 0
+Out_2
+$EndSCHEMATC

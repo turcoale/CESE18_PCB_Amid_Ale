@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name PonchoPLC)(type Legacy)(uri ${LOCAL}/PonchoPLC.lib)(options "")(descr ""))
+  (lib (name EESTN5)(type Legacy)(uri ${LOCAL}/EESTN5.lib)(options "")(descr ""))
+)
