@@ -319,4 +319,16 @@ Wire Wire Line
 	6550 3950 7350 3950
 Wire Wire Line
 	7350 3950 7350 3250
+Text Label 6950 2950 0    50   ~ 0
+K1_C
+Text Label 6950 2850 0    50   ~ 0
+K1_NA
+Text Label 7350 2550 0    50   ~ 0
+K1_NC
+Text Label 7150 3950 0    50   ~ 0
+K2_C
+Text Label 7150 3150 0    50   ~ 0
+K2_NA
+Text Label 7150 3050 0    50   ~ 0
+K2_NC
 $EndSCHEMATC
