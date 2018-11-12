@@ -10,8 +10,8 @@ Date "2018-10-27"
 Rev "1.0"
 Comp "Proyecto CIAA - COMPUTADORA INDUSTRIAL ABIERTA ARGENTINA"
 Comment1 "https://github.com/turcoale/CESE18_PCB_Amid_Ale.git"
-Comment2 "Autor: Amid Ale"
-Comment3 ""
+Comment2 "Basado en diseños anteriores: Mariano Bustos - Jorge Osio - Diego Brengi"
+Comment3 "Autor: Amid Ale"
 Comment4 "CÓDIGO PONCHO: ALARMA"
 $EndDescr
 $Comp
@@ -97,23 +97,10 @@ Wire Wire Line
 	7200 2450 7650 2450
 Wire Wire Line
 	7650 2450 7650 2150
-$Comp
-L power:GND #PWR0101
-U 1 1 5BD0E778
-P 7450 2650
-F 0 "#PWR0101" H 7450 2400 50  0001 C CNN
-F 1 "GND" H 7550 2550 50  0000 C CNN
-F 2 "" H 7450 2650 50  0001 C CNN
-F 3 "" H 7450 2650 50  0001 C CNN
-	1    7450 2650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7100 2550 7450 2550
 Wire Wire Line
 	7450 2550 7450 2150
-Wire Wire Line
-	7450 2650 7450 2550
 Connection ~ 7450 2550
 Wire Wire Line
 	7450 2550 7850 2550
@@ -126,6 +113,8 @@ F0 "Salidas" 50
 F1 "Salidas.sch" 50
 F2 "Out_1" I R 3750 2650 50 
 F3 "Out_2" I R 3750 2300 50 
+F4 "VCC_5V" I L 2600 2200 50 
+F5 "GND" I L 2600 2350 50 
 $EndSheet
 $Sheet
 S 5600 1200 1650 1000
@@ -136,6 +125,7 @@ F2 "In_1" I L 5600 1400 50
 F3 "In_2" I L 5600 1550 50 
 F4 "In_3" I L 5600 1700 50 
 F5 "In_4" I L 5600 1850 50 
+F6 "GND" I L 5600 1300 50 
 $EndSheet
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even J1
@@ -143,7 +133,7 @@ U 1 1 5BD3AECC
 P 3350 5800
 F 0 "J1" H 3400 5500 50  0000 C CNN
 F 1 "ESP8266" H 3400 6000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 3350 5800 50  0001 C CNN
+F 2 "local:ESP-01" H 3350 5800 50  0001 C CNN
 F 3 "~" H 3350 5800 50  0001 C CNN
 	1    3350 5800
 	1    0    0    1   
@@ -244,18 +234,6 @@ Wire Wire Line
 Wire Wire Line
 	5550 1850 5600 1850
 $Comp
-L Poncho_Alarma-rescue:+3.3V-PonchoPLC #PWR0103
-U 1 1 5BD07F4E
-P 3750 5600
-F 0 "#PWR0103" H 3750 5450 50  0001 C CNN
-F 1 "+3.3V-PonchoPLC" H 3650 5800 50  0000 C CNN
-F 2 "" H 3750 5600 60  0000 C CNN
-F 3 "" H 3750 5600 60  0000 C CNN
-	1    3750 5600
-	1    0    0    -1  
-$EndComp
-Connection ~ 3750 5600
-$Comp
 L power:+5V #PWR0104
 U 1 1 5BD0826B
 P 7300 2350
@@ -301,7 +279,6 @@ NoConn ~ 4050 5200
 NoConn ~ 4050 5100
 NoConn ~ 4050 5000
 NoConn ~ 4050 4900
-NoConn ~ 4050 4800
 NoConn ~ 5250 2700
 NoConn ~ 4050 2300
 NoConn ~ 4050 2400
@@ -351,4 +328,123 @@ NoConn ~ 5250 5000
 NoConn ~ 5250 4900
 NoConn ~ 8850 2150
 NoConn ~ 8950 2150
+$Comp
+L Poncho_Alarma-rescue:+3.3V-PonchoPLC #PWR0103
+U 1 1 5BE747D1
+P 3750 5600
+F 0 "#PWR0103" H 3750 5450 50  0001 C CNN
+F 1 "+3.3V-PonchoPLC" H 3765 5773 50  0000 C CNN
+F 2 "" H 3750 5600 60  0000 C CNN
+F 3 "" H 3750 5600 60  0000 C CNN
+	1    3750 5600
+	1    0    0    -1  
+$EndComp
+Connection ~ 3750 5600
+$Comp
+L power:+5V #PWR0124
+U 1 1 5BE7A339
+P 2450 2150
+F 0 "#PWR0124" H 2450 2000 50  0001 C CNN
+F 1 "+5V" H 2465 2323 50  0000 C CNN
+F 2 "" H 2450 2150 50  0001 C CNN
+F 3 "" H 2450 2150 50  0001 C CNN
+	1    2450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0125
+U 1 1 5BE7B18E
+P 2400 2400
+F 0 "#PWR0125" H 2400 2150 50  0001 C CNN
+F 1 "GND" H 2405 2227 50  0000 C CNN
+F 2 "" H 2400 2400 50  0001 C CNN
+F 3 "" H 2400 2400 50  0001 C CNN
+	1    2400 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2150 2450 2200
+Wire Wire Line
+	2450 2200 2600 2200
+Wire Wire Line
+	2400 2400 2400 2350
+Wire Wire Line
+	2400 2350 2600 2350
+$Comp
+L Poncho_Alarma-rescue:+3.3V-PonchoPLC #PWR0126
+U 1 1 5BE7EF40
+P 3450 4750
+F 0 "#PWR0126" H 3450 4600 50  0001 C CNN
+F 1 "+3.3V-PonchoPLC" H 3465 4923 50  0000 C CNN
+F 2 "" H 3450 4750 60  0000 C CNN
+F 3 "" H 3450 4750 60  0000 C CNN
+	1    3450 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4750 3450 4800
+Wire Wire Line
+	3450 4800 4050 4800
+$Comp
+L power:GND #PWR0127
+U 1 1 5BE880EA
+P 4950 1400
+F 0 "#PWR0127" H 4950 1150 50  0001 C CNN
+F 1 "GND" H 4955 1227 50  0000 C CNN
+F 2 "" H 4950 1400 50  0001 C CNN
+F 3 "" H 4950 1400 50  0001 C CNN
+	1    4950 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1400 4950 1300
+Wire Wire Line
+	4950 1300 5600 1300
+$Comp
+L power:GND #PWR0101
+U 1 1 5BE984BB
+P 7450 2650
+F 0 "#PWR0101" H 7450 2400 50  0001 C CNN
+F 1 "GND" H 7455 2477 50  0000 C CNN
+F 2 "" H 7450 2650 50  0001 C CNN
+F 3 "" H 7450 2650 50  0001 C CNN
+	1    7450 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2650 7450 2550
+Wire Notes Line
+	2800 5600 2800 6550
+Wire Notes Line
+	2800 6550 1850 6550
+Wire Notes Line
+	1850 6550 1850 5600
+Wire Notes Line
+	1850 5600 2800 5600
+Text Label 2200 5700 0    50   Italic 10
+ESP8266:
+Text Label 1900 5700 0    50   Italic 10
+Pinout
+Text Label 2100 5800 0    50   ~ 0
+1-GND
+Text Label 2100 5900 0    50   ~ 0
+2-GPIO2
+Text Label 2100 6000 0    50   ~ 0
+3-GPIO0
+Text Label 2100 6100 0    50   ~ 0
+4-RXD
+Text Label 2100 6200 0    50   ~ 0
+5-VCC
+Text Label 2100 6300 0    50   ~ 0
+6-RST
+Text Label 2100 6400 0    50   ~ 0
+7-CH_PD
+Text Label 2100 6500 0    50   ~ 0
+8-TXD
+Text Label 6000 2750 0    50   Italic 10
+Pines_Display_16x2:
+Text Label 2650 1900 0    50   Italic 10
+Circuito_de_Salidas:
+Text Label 5950 1100 0    50   Italic 10
+Circuito_de_entradas:
 $EndSCHEMATC

@@ -10,8 +10,8 @@ Date "2018-10-27"
 Rev "1.0"
 Comp "Proyecto CIAA - COMPUTADORA INDUSTRIAL ABIERTA ARGENTINA"
 Comment1 "https://github.com/turcoale/CESE18_PCB_Amid_Ale.git"
-Comment2 "Autor: Amid Ale"
-Comment3 ""
+Comment2 "Basado en diseños anteriores: Diego Brengi - Jorge Osio - Mariano Bustos"
+Comment3 "Autor: Amid Ale"
 Comment4 "CÓDIGO PONCHO: ALARMA"
 $EndDescr
 $Comp
@@ -76,25 +76,23 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0112
 U 1 1 5BD2D67F
-P 5200 2300
-F 0 "#PWR0112" H 5200 2050 50  0001 C CNN
-F 1 "GND" H 5205 2127 50  0000 C CNN
-F 2 "" H 5200 2300 50  0001 C CNN
-F 3 "" H 5200 2300 50  0001 C CNN
-	1    5200 2300
+P 5200 2350
+F 0 "#PWR0112" H 5200 2100 50  0001 C CNN
+F 1 "GND" H 5205 2177 50  0000 C CNN
+F 2 "" H 5200 2350 50  0001 C CNN
+F 3 "" H 5200 2350 50  0001 C CNN
+	1    5200 2350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5200 2200 5200 2300
 $Comp
 L power:GND #PWR0113
 U 1 1 5BD2D686
-P 3900 2300
-F 0 "#PWR0113" H 3900 2050 50  0001 C CNN
-F 1 "GND" H 3905 2127 50  0000 C CNN
-F 2 "" H 3900 2300 50  0001 C CNN
-F 3 "" H 3900 2300 50  0001 C CNN
-	1    3900 2300
+P 4300 2300
+F 0 "#PWR0113" H 4300 2050 50  0001 C CNN
+F 1 "GND" H 4305 2127 50  0000 C CNN
+F 2 "" H 4300 2300 50  0001 C CNN
+F 3 "" H 4300 2300 50  0001 C CNN
+	1    4300 2300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -180,10 +178,6 @@ F 3 "~" H 6150 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6250 2600 6450 2600
-Wire Wire Line
-	6450 3000 6250 3000
-Wire Wire Line
 	5750 2600 6050 2600
 Wire Wire Line
 	5200 3000 5300 3000
@@ -210,12 +204,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0115
 U 1 1 5BD2D92E
-P 3900 3450
-F 0 "#PWR0115" H 3900 3200 50  0001 C CNN
-F 1 "GND" H 3905 3277 50  0000 C CNN
-F 2 "" H 3900 3450 50  0001 C CNN
-F 3 "" H 3900 3450 50  0001 C CNN
-	1    3900 3450
+P 3900 3550
+F 0 "#PWR0115" H 3900 3300 50  0001 C CNN
+F 1 "GND" H 3905 3377 50  0000 C CNN
+F 2 "" H 3900 3550 50  0001 C CNN
+F 3 "" H 3900 3550 50  0001 C CNN
+	1    3900 3550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -308,17 +302,6 @@ Wire Wire Line
 Connection ~ 5300 4100
 Wire Wire Line
 	5300 4100 6050 4100
-$Comp
-L power:GND #PWR0116
-U 1 1 5BD2E044
-P 5200 4400
-F 0 "#PWR0116" H 5200 4150 50  0001 C CNN
-F 1 "GND" H 5205 4227 50  0000 C CNN
-F 2 "" H 5200 4400 50  0001 C CNN
-F 3 "" H 5200 4400 50  0001 C CNN
-	1    5200 4400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5200 4300 5200 4400
 Wire Wire Line
@@ -334,8 +317,6 @@ F 3 "~" H 3650 4100 50  0001 C CNN
 	1    3650 4100
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	3900 4350 3900 4400
 $Comp
 L Device:R_Small R13
 U 1 1 5BD2E05E
@@ -397,10 +378,6 @@ F 3 "~" H 6100 5150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6200 4750 6400 4750
-Wire Wire Line
-	6400 5150 6200 5150
-Wire Wire Line
 	5700 4750 6000 4750
 Wire Wire Line
 	5150 5150 5250 5150
@@ -414,23 +391,16 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0119
 U 1 1 5BD2ECE4
-P 3850 5450
-F 0 "#PWR0119" H 3850 5200 50  0001 C CNN
-F 1 "GND" H 3855 5277 50  0000 C CNN
-F 2 "" H 3850 5450 50  0001 C CNN
-F 3 "" H 3850 5450 50  0001 C CNN
-	1    3850 5450
+P 3850 5550
+F 0 "#PWR0119" H 3850 5300 50  0001 C CNN
+F 1 "GND" H 3855 5377 50  0000 C CNN
+F 2 "" H 3850 5550 50  0001 C CNN
+F 3 "" H 3850 5550 50  0001 C CNN
+	1    3850 5550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 5450 4250 5350
-Wire Wire Line
-	4250 5350 4350 5350
-Wire Wire Line
 	3850 5150 4350 5150
-Wire Wire Line
-	3850 5450 4250 5450
-Connection ~ 3850 5450
 $Comp
 L Device:R_Small R6
 U 1 1 5BD2ECEF
@@ -442,8 +412,6 @@ F 3 "~" H 3600 5150 50  0001 C CNN
 	1    3600 5150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	3850 5400 3850 5450
 $Comp
 L Device:R_Small R10
 U 1 1 5BD2ECF7
@@ -485,26 +453,10 @@ Wire Wire Line
 	3900 4400 4250 4400
 Wire Wire Line
 	4250 4300 4250 4400
-Connection ~ 3900 4400
-Wire Wire Line
-	3900 3450 4300 3450
 Wire Wire Line
 	4300 3200 4300 3450
 Wire Wire Line
-	3900 3250 3900 3450
-Connection ~ 3900 3450
-Wire Wire Line
 	5150 5350 5150 5500
-Wire Wire Line
-	3900 4500 3900 4400
-Wire Wire Line
-	6450 3700 6450 3900
-Wire Wire Line
-	6400 4750 6400 4950
-Wire Wire Line
-	6450 2600 6450 2800
-Wire Wire Line
-	6450 1600 6450 1800
 $Comp
 L power:GND #PWR0118
 U 1 1 5BDC134B
@@ -516,62 +468,6 @@ F 3 "" H 5150 5500 50  0001 C CNN
 	1    5150 5500
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3.3V #PWR02
-U 1 1 5BDC19C0
-P 6450 1800
-F 0 "#PWR02" H 6450 1650 50  0001 C CNN
-F 1 "+3.3V" V 6465 1928 50  0000 L CNN
-F 2 "" H 6450 1800 50  0001 C CNN
-F 3 "" H 6450 1800 50  0001 C CNN
-	1    6450 1800
-	0    1    1    0   
-$EndComp
-Connection ~ 6450 1800
-Wire Wire Line
-	6450 1800 6450 2000
-$Comp
-L power:+3.3V #PWR03
-U 1 1 5BDC1B35
-P 6450 2800
-F 0 "#PWR03" H 6450 2650 50  0001 C CNN
-F 1 "+3.3V" V 6465 2928 50  0000 L CNN
-F 2 "" H 6450 2800 50  0001 C CNN
-F 3 "" H 6450 2800 50  0001 C CNN
-	1    6450 2800
-	0    1    1    0   
-$EndComp
-Connection ~ 6450 2800
-Wire Wire Line
-	6450 2800 6450 3000
-$Comp
-L power:+3.3V #PWR04
-U 1 1 5BDC1D52
-P 6450 3900
-F 0 "#PWR04" H 6450 3750 50  0001 C CNN
-F 1 "+3.3V" V 6465 4028 50  0000 L CNN
-F 2 "" H 6450 3900 50  0001 C CNN
-F 3 "" H 6450 3900 50  0001 C CNN
-	1    6450 3900
-	0    1    1    0   
-$EndComp
-Connection ~ 6450 3900
-Wire Wire Line
-	6450 3900 6450 4100
-$Comp
-L power:+3.3V #PWR01
-U 1 1 5BDC1EAF
-P 6400 4950
-F 0 "#PWR01" H 6400 4800 50  0001 C CNN
-F 1 "+3.3V" V 6415 5078 50  0000 L CNN
-F 2 "" H 6400 4950 50  0001 C CNN
-F 3 "" H 6400 4950 50  0001 C CNN
-	1    6400 4950
-	0    1    1    0   
-$EndComp
-Connection ~ 6400 4950
-Wire Wire Line
-	6400 4950 6400 5150
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 5BDC21CB
@@ -607,4 +503,115 @@ Wire Wire Line
 	5250 5350 7700 5350
 Wire Wire Line
 	7700 5350 7700 3350
+Wire Wire Line
+	6200 4750 6400 4750
+Wire Wire Line
+	6200 5150 6400 5150
+Wire Wire Line
+	3850 5450 4350 5450
+Wire Wire Line
+	4350 5450 4350 5350
+Wire Wire Line
+	3850 5400 3850 5450
+Connection ~ 3850 5450
+Wire Wire Line
+	3850 5550 3850 5450
+Wire Wire Line
+	6300 2600 6300 2800
+Wire Wire Line
+	6250 2600 6300 2600
+Wire Wire Line
+	6300 3000 6250 3000
+Wire Wire Line
+	6450 3700 6450 3900
+Wire Wire Line
+	6400 4750 6400 4950
+$Comp
+L Poncho_Alarma-rescue:+3.3V-PonchoPLC #PWR0120
+U 1 1 5BE74C36
+P 6400 4950
+F 0 "#PWR0120" H 6400 4800 50  0001 C CNN
+F 1 "+3.3V-PonchoPLC" V 6415 5078 50  0000 L CNN
+F 2 "" H 6400 4950 60  0000 C CNN
+F 3 "" H 6400 4950 60  0000 C CNN
+	1    6400 4950
+	0    1    1    0   
+$EndComp
+Connection ~ 6400 4950
+Wire Wire Line
+	6400 4950 6400 5150
+$Comp
+L Poncho_Alarma-rescue:+3.3V-PonchoPLC #PWR0121
+U 1 1 5BE74DF3
+P 6450 3900
+F 0 "#PWR0121" H 6450 3750 50  0001 C CNN
+F 1 "+3.3V-PonchoPLC" V 6465 4028 50  0000 L CNN
+F 2 "" H 6450 3900 60  0000 C CNN
+F 3 "" H 6450 3900 60  0000 C CNN
+	1    6450 3900
+	0    1    1    0   
+$EndComp
+Connection ~ 6450 3900
+Wire Wire Line
+	6450 3900 6450 4100
+$Comp
+L Poncho_Alarma-rescue:+3.3V-PonchoPLC #PWR0122
+U 1 1 5BE75152
+P 6300 2800
+F 0 "#PWR0122" H 6300 2650 50  0001 C CNN
+F 1 "+3.3V-PonchoPLC" V 6315 2928 50  0000 L CNN
+F 2 "" H 6300 2800 60  0000 C CNN
+F 3 "" H 6300 2800 60  0000 C CNN
+	1    6300 2800
+	0    1    1    0   
+$EndComp
+Connection ~ 6300 2800
+Wire Wire Line
+	6300 2800 6300 3000
+$Comp
+L Poncho_Alarma-rescue:+3.3V-PonchoPLC #PWR0123
+U 1 1 5BE752A4
+P 6450 1800
+F 0 "#PWR0123" H 6450 1650 50  0001 C CNN
+F 1 "+3.3V-PonchoPLC" V 6465 1928 50  0000 L CNN
+F 2 "" H 6450 1800 60  0000 C CNN
+F 3 "" H 6450 1800 60  0000 C CNN
+	1    6450 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 1600 6450 1800
+Wire Wire Line
+	3900 4500 3900 4400
+Wire Wire Line
+	3900 4350 3900 4400
+Connection ~ 3900 4400
+Connection ~ 6450 1800
+Wire Wire Line
+	6450 1800 6450 2000
+Text HLabel 3250 2300 0    50   Input ~ 0
+GND
+Wire Wire Line
+	3250 2300 3900 2300
+Wire Wire Line
+	5200 2200 5200 2350
+Connection ~ 4300 2300
+Wire Wire Line
+	4300 3450 3900 3450
+Wire Wire Line
+	3900 3450 3900 3550
+Wire Wire Line
+	3900 3250 3900 3450
+Connection ~ 3900 3450
+$Comp
+L power:GND #PWR0109
+U 1 1 5BE9A5FB
+P 5200 4400
+F 0 "#PWR0109" H 5200 4150 50  0001 C CNN
+F 1 "GND" H 5205 4227 50  0000 C CNN
+F 2 "" H 5200 4400 50  0001 C CNN
+F 3 "" H 5200 4400 50  0001 C CNN
+	1    5200 4400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

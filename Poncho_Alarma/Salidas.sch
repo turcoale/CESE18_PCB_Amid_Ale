@@ -10,8 +10,8 @@ Date "2018-10-27"
 Rev "1.0"
 Comp "Proyecto CIAA - COMPUTADORA INDUSTRIAL ABIERTA ARGENTINA"
 Comment1 "https://github.com/turcoale/CESE18_PCB_Amid_Ale.git"
-Comment2 "Autor: Amid Ale"
-Comment3 ""
+Comment2 "Basado en diseños anteriores: Mariano Bustos - Jorge Osio - Diego Brengi"
+Comment3 "Autor: Amid Ale"
 Comment4 "CÓDIGO PONCHO: ALARMA"
 $EndDescr
 Wire Wire Line
@@ -53,19 +53,6 @@ F 3 "" H 5050 5000 50  0001 C CNN
 	1    5050 5000
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0107
-U 1 1 5BD28B7A
-P 5700 4850
-F 0 "#PWR0107" H 5700 4600 50  0001 C CNN
-F 1 "GND" H 5705 4677 50  0000 C CNN
-F 2 "" H 5700 4850 50  0001 C CNN
-F 3 "" H 5700 4850 50  0001 C CNN
-	1    5700 4850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5700 4850 5700 4700
 $Comp
 L Diode:LL4148 D4
 U 1 1 5BD28B81
@@ -174,29 +161,16 @@ Wire Wire Line
 Wire Wire Line
 	5050 2400 5400 2400
 $Comp
-L power:GND #PWR0109
-U 1 1 5BD28BC1
-P 5050 2900
-F 0 "#PWR0109" H 5050 2650 50  0001 C CNN
-F 1 "GND" H 5055 2727 50  0000 C CNN
-F 2 "" H 5050 2900 50  0001 C CNN
-F 3 "" H 5050 2900 50  0001 C CNN
-	1    5050 2900
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0110
 U 1 1 5BD28BC7
-P 5700 2750
-F 0 "#PWR0110" H 5700 2500 50  0001 C CNN
-F 1 "GND" H 5705 2577 50  0000 C CNN
-F 2 "" H 5700 2750 50  0001 C CNN
-F 3 "" H 5700 2750 50  0001 C CNN
-	1    5700 2750
+P 5700 2850
+F 0 "#PWR0110" H 5700 2600 50  0001 C CNN
+F 1 "GND" H 5705 2677 50  0000 C CNN
+F 2 "" H 5700 2850 50  0001 C CNN
+F 3 "" H 5700 2850 50  0001 C CNN
+	1    5700 2850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5700 2750 5700 2600
 $Comp
 L Diode:LL4148 D3
 U 1 1 5BD28BCE
@@ -230,8 +204,6 @@ F 3 "~" H 5050 2650 50  0001 C CNN
 	1    5050 2650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5050 2750 5050 2900
 $Comp
 L Device:R_Small R4
 U 1 1 5BD28BE4
@@ -278,7 +250,7 @@ Wire Wire Line
 	5300 1700 5300 1850
 Text HLabel 5050 2400 0    50   Input ~ 0
 Out_1
-Text HLabel 5300 3550 0    50   Input ~ 0
+Text HLabel 5050 4500 0    50   Input ~ 0
 Out_2
 $Comp
 L Connector_Generic:Conn_01x06 J2
@@ -331,4 +303,36 @@ Text Label 7150 3150 0    50   ~ 0
 K2_NA
 Text Label 7150 3050 0    50   ~ 0
 K2_NC
+Text HLabel 5050 1200 0    50   Input ~ 0
+VCC_5V
+Wire Wire Line
+	5050 1200 5050 1450
+Wire Wire Line
+	5050 1450 5300 1450
+Connection ~ 5300 1450
+Text HLabel 4850 2850 0    50   Input ~ 0
+GND
+Wire Wire Line
+	4850 2850 5050 2850
+Wire Wire Line
+	5700 2600 5700 2850
+Connection ~ 5700 2850
+Wire Wire Line
+	5050 2750 5050 2850
+Connection ~ 5050 2850
+Wire Wire Line
+	5050 2850 5700 2850
+$Comp
+L power:GND #PWR0107
+U 1 1 5BE9AAA2
+P 5700 4900
+F 0 "#PWR0107" H 5700 4650 50  0001 C CNN
+F 1 "GND" H 5705 4727 50  0000 C CNN
+F 2 "" H 5700 4900 50  0001 C CNN
+F 3 "" H 5700 4900 50  0001 C CNN
+	1    5700 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 4900 5700 4700
 $EndSCHEMATC
